@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#1f2937">
+    <title>Kyprod</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Kyprod</h1>
+        <p>Delmondes Utilidades Para o Lar</p>
+    </header>
+
+    <section class="filtros">
+        <select id="campoFiltro">
+            <option value="Nome">Nome</option>
+            <option value="Cogido">Código</option>
+            <option value="Valor de vendav">Valor Venda</option>
+            <option value="Valor Sem F/M">Valor S/F-M</option>
+            <option value="Valor de compra">Valor Compra</option>
+        </select>
+
+        <input type="text" id="busca" placeholder="Buscar...">
+    </section>
+
+    <section id="lista" class="lista"></section>
+
+    <script src="app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+
+</body>
+
+</html>
