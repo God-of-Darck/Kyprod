@@ -4,16 +4,33 @@ const API_TOKEN = "9if2RRgZA3yBNJ2OExtNtszWOfcb9yeE";
 let dadosCompletos = [];
 
 async function carregarDados() {
-  const res = await fetch(API_URL, {
-    headers: {
-      Authorization: `Token ${API_TOKEN}`
-    }
-  });
+  dadosCompletos = [];
+  let url = API_URL;
 
-  const json = await res.json();
-  dadosCompletos = json.results || [];
+  while (url) {
+    // 🔥 FORÇA HTTPS (corrige bug do Baserow)
+    url = url.replace("http://", "https://");
+
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Token ${API_TOKEN}`
+      }
+    });
+
+    const json = await res.json();
+
+    if (json.results && Array.isArray(json.results)) {
+      dadosCompletos.push(...json.results);
+    }
+
+    url = json.next; // próxima página
+  }
+
+  console.log("Produtos:", dadosCompletos.length);
   renderizar(dadosCompletos);
 }
+
+
 
 function renderizar(lista) {
   const container = document.getElementById("lista");
