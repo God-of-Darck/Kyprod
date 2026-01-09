@@ -11,6 +11,10 @@ header {
     text-align: center;
 }
 
+#button-color{
+    background: #3f3b70;
+}
+
 .filtros {
     display: flex;
     gap: 8px;
