@@ -32,6 +32,22 @@ async function carregarDados() {
 
 
 
+function color(css1, css2) {
+  const link = document.getElementById('theme-css');
+  const button = document.getElementById('button-color');
+
+  if (link.getAttribute('href') === css1) {
+    link.setAttribute('href', css2);
+    button.textContent = "Lingt";
+  } else {
+    link.setAttribute('href', css1);
+    button.textContent = "Dark Mode";
+  }
+}
+
+
+
+
 function renderizar(lista) {
   const container = document.getElementById("lista");
   container.innerHTML = "";
