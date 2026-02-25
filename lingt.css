@@ -52,3 +52,37 @@ header {
     font-size: 14px;
     margin-top: 6px;
 }
+
+
+.produto-detalhe {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.produto-img {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.produto-info {
+    flex: 1;
+    font-size: 18px;
+}
+
+.btn-voltar {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #374151;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background: #111827;
+}

@@ -2,8 +2,10 @@ const CACHE_NAME = "kyprod-cache-v1";
 const URLS = [
     "./",
     "./index.html",
+    "./produto.html",
     "./style.css",
-    "./app.js"
+    "./app.js",
+    "./produto.js"
 ];
 
 self.addEventListener("install", event => {

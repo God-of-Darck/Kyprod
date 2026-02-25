@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#1f2937">
+    <title>Produto - Kyprod</title>
+    <link rel="stylesheet" id="theme-css" href="lingt.css">
+</head>
+
+
+<body>
+
+<header>
+    <h1 id="nomeProduto">Carregando...</h1>
+    <button onclick="voltar()" class="btn-voltar">← Voltar</button>
+</header>
+
+<section class="produto-detalhe">
+    <img id="imagemProduto" class="produto-img" />
+    
+    <div class="produto-info">
+        <p><strong>Código:</strong> <span id="codigoProduto"></span></p>
+        <p><strong>Venda:</strong> R$ <span id="vendaProduto"></span></p>
+        <p><strong>S/F-M:</strong> R$ <span id="sfmProduto"></span></p>
+        <p><strong>Compra:</strong> R$ <span id="compraProduto"></span></p>
+        <p id="descricaoProduto"></p>
+    </div>
+</section>
+
+<script src="app.js"></script>
+<script src="produto.js"></script>
+
+</body>
+</html>
