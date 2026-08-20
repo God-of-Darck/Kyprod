@@ -5,7 +5,7 @@ async function carregarProduto() {
     if (!id) return;
 
     const res = await fetch(
-        `https://api.baserow.io/api/database/rows/table/1141235/${id}/?user_field_names=true`,
+        `https://api.baserow.io/api/database/rows/table/763804/${id}/?user_field_names=true`,
         {
             headers: {
                 Authorization: `Token ${API_TOKEN}`
